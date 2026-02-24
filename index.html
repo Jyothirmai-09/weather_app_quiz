@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz, Weather Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="weather-section" id="weatherSection">
+      <h2>🌦️ Current Weather</h2>
+      <form id="cityForm" style="margin-bottom:1em;">
+        <input type="text" id="cityInput" placeholder="Enter city name" style="padding:0.5em; border-radius:6px; border:1px solid #b2c7e6;">
+        <button type="submit" style="padding:0.5em 1em; border-radius:6px; border:none; background:#2a5298; color:#fff; font-weight:bold; cursor:pointer;">Get Weather</button>
+      </form>
+      <div id="weatherData">
+        <p>Loading weather...</p>
+      </div>
+    </section>
+    <section class="quiz-section">
+      <h2>📝 Interactive Quiz</h2>
+      <div id="quizContainer"></div>
+      <div id="quizScore"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

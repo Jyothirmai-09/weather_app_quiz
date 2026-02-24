@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  color: #222;
+  background: radial-gradient(circle at 70% 20%, #ffe6fa 0%, #e0eafc 40%, #cfdef3 100%);
+}
+
+main {
+  max-width: 500px;
+  margin: 2.5em auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+  padding: 2em 1.5em;
+}
+
+h2 {
+  color: #ff69b4;
+  margin-top: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0 2px 8px #fff0f6;
+}
+
+.weather-section {
+  background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px #a8edea44;
+  padding: 1.5em 1em 1.2em 1em;
+  margin-bottom: 2.5em;
+}
+
+.quiz-section {
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px #fcb69f44;
+  padding: 1.5em 1em 1.2em 1em;
+  margin-bottom: 2.5em;
+}
+
+#weatherData {
+  font-size: 1.1em;
+  margin-top: 0.7em;
+  text-align: center;
+}
+
+#weatherIcon {
+  vertical-align: middle;
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 8px #b2c7e6);
+}
+
+form#cityForm {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+#cityInput {
+  flex: 1;
+  min-width: 0;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+}
+
+#cityInput:focus {
+  border: 1.5px solid #ff69b4 !important;
+}
+
+#cityForm button {
+  background: linear-gradient(90deg, #ff69b4 0%, #ffb6c1 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffb6c1;
+  transition: background 0.2s, transform 0.15s;
+}
+
+#cityForm button:hover {
+  background: linear-gradient(90deg, #ff1493 0%, #ff69b4 100%);
+  transform: scale(1.06);
+}
+
+#quizContainer {
+  margin-bottom: 1em;
+}
+
+.quiz-question {
+  font-weight: bold;
+  margin-bottom: 0.7em;
+  font-size: 1.15em;
+  color: #2a5298;
+  text-align: center;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  align-items: center;
+}
+
+.quiz-option {
+  background: #e0eafc;
+  border: 1px solid #b2c7e6;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-size: 1em;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px #b2c7e633;
+}
+
+.quiz-option:hover {
+  background: #ff69b4;
+  color: #fff;
+  box-shadow: 0 4px 16px #ffb6c1;
+}
+
+.quiz-option.correct {
+  background: #27ae60;
+  color: #fff;
+  box-shadow: 0 4px 16px #27ae60;
+}
+
+.quiz-option.incorrect {
+  background: #e74c3c;
+  color: #fff;
+  box-shadow: 0 4px 16px #e74c3c;
+}
+
+#quizScore {
+  font-size: 1.1em;
+  color: #2a5298;
+  margin-top: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  main { padding: 1em 0.2em; }
+  .quiz-option { min-width: 0; width: 100%; }
+}
+
+.paper-drop {
+  position: fixed;
+  top: -40px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: paper-fall 3.5s linear forwards;
+  box-shadow: 0 2px 8px #0001;
+}
+
+@keyframes paper-fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.7;
+  }
+}
