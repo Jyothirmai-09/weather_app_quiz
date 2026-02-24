@@ -47,7 +47,7 @@ script.js       # Weather logic and quiz logic
 
 
 ## preview
+<img width="1584" height="765" alt="image" src="https://github.com/user-attachments/assets/2d2b00d2-e38a-4e79-927c-b91aaf4ac03a" />
 
-<img width="1896" height="875" alt="image" src="https://github.com/user-attachments/assets/e62af05c-8750-45aa-8877-27b9002aaac9" />
 
 **Enjoy our Quiz & Weather Web
